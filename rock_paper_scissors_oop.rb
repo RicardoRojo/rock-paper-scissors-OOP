@@ -66,5 +66,7 @@ class Game
     end
   end
 end
-
-Game.new.play
+begin
+  Game.new.play
+  puts "Play again? (NO to end)"
+end until ["no","n"].include?(gets.chomp.downcase)
